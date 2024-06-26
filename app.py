@@ -127,7 +127,7 @@ def run_conversation(agents, initial_message, num_turns=15):
         socketio.emit('new_message', {'role': agent.name, 'content': response})
         message = response
         last_agent = agent
-        time.sleep(1)  # Add a delay between messages
+        time.sleep(0.7)  # Add a delay between messages
 
 if __name__ == '__main__':
     socketio.run(app, debug=True)
